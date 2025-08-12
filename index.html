@@ -63,11 +63,23 @@
     <main>
         <!-- ***** Start ***** -->
         <section>
-            <div class="go-top-container">
+            <!-- Botón go-top en su posición original -->
+            <div class="go-top-container" style="position: fixed; bottom: 30px; right: 30px; z-index: 999;">
                 <div class="go-top-button">
                     <i class="fas fa-chevron-up"></i>
                 </div>
             </div>
+            <!-- Botón de música alineado y 80px más arriba -->
+            <div class="music-fixed">
+                <div class="music-button" id="music-btn">
+                    <i class="fas fa-music" id="music-icon"></i>
+                </div>
+                <audio id="bg-music" loop>
+                    <source src="assets/music/tu-musica.mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio HTML5.
+                </audio>
+            </div>
+    <link rel="stylesheet" href="assets/css/music-button.css">
         </section>
 
         <div id="top">
@@ -275,7 +287,8 @@
         <script src="assets/js/isotope.js"></script>
 
         <!-- Global Init -->
-        <script src="assets/js/custom.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/music-button.js"></script>
     </main>
 </body>
 
